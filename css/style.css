@@ -255,16 +255,16 @@ a { color: inherit; }
 
 .q-view { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: clamp(14px, 2.4vh, 24px); }
 .q-head { display: flex; flex-direction: column; gap: 10px; }
-.q-text { font-size: clamp(30px, 3.1vw, 42px); color: var(--ink); text-wrap: balance; max-width: 30ch; }
+.q-text { font-size: clamp(32px, 3.5vw, 48px); color: var(--ink); text-wrap: balance; max-width: 36ch; }
 .answers { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(12px, 1.8vh, 18px) 18px; }
 .answer {
-  min-height: clamp(84px, 13vh, 104px);
+  min-height: clamp(96px, 16vh, 136px);
   padding: 14px 22px;
   border-radius: 16px;
   border: 3px solid var(--ink);
   background: var(--paper);
   color: var(--ink);
-  font-size: clamp(22px, 2.1vw, 27px);
+  font-size: clamp(24px, 2.5vw, 31px);
   font-weight: 600;
   line-height: 1.2;
   text-align: left;
@@ -292,7 +292,7 @@ a { color: inherit; }
 .answer.is-wrong { background: var(--wrong); border-color: var(--wrong); color: #fff; box-shadow: 0 5px 0 var(--deep); opacity: 1; }
 .answer.is-correct .mark, .answer.is-wrong .mark { display: block; }
 .answer.is-dim { opacity: 0.4; }
-.answers.tf .answer { justify-content: center; font-size: 30px; font-family: var(--serif); }
+.answers.tf .answer { justify-content: center; font-size: 40px; font-family: var(--serif); min-height: clamp(150px, 30vh, 240px); }
 .answers.tf .answer .mark { margin-left: 8px; }
 
 .feedback {

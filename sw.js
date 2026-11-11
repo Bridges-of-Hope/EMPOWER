@@ -3,8 +3,11 @@ var FONT_CSS = "https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@
 var FILES = [
   "./",
   "index.html",
+  "trivia.html",
   "css/style.css",
   "js/app.js",
+  "js/trivia.js",
+  "questions.js",
   "assets/logo.png",
   "assets/icon-180.png",
   "assets/icon-192.png",
