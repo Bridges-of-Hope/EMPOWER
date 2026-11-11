@@ -246,7 +246,6 @@ a { color: inherit; }
 .choice.gold:active { box-shadow: 0 1px 0 var(--gold); }
 .choice.gold strong { color: var(--gold); }
 .choice.gold .go { background: var(--gold); }
-.home-note { font-size: 17px; color: #6b5a56; }
 
 /* ---------- Trivia ---------- */
 .dots { display: flex; gap: 10px; position: relative; z-index: 1; }
@@ -554,8 +553,6 @@ a { color: inherit; }
   .choice strong { font-size: 25px; }
   .choice small { font-size: 16px; margin-top: 4px; }
   .choice .go { width: 56px; height: 56px; }
-  .home-note { font-size: 15px; text-align: center; }
-
   /* Trivia */
   .bar:has(#progress-text) h1 { display: none; }
   .bar .bar-meta#progress-text { margin-left: auto; font-size: 17px; }
