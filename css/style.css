@@ -345,6 +345,7 @@ a { color: inherit; }
 .btn-row { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 10px; }
 
 /* ---------- Give ---------- */
+.play { flex: 1; min-height: 0; display: flex; flex-direction: column; }
 .give-top { display: flex; align-items: center; gap: clamp(16px, 2vw, 28px); }
 .counter {
   flex: none;
@@ -388,7 +389,8 @@ a { color: inherit; }
 .tray .slot.filled { background: none; }
 .slot.filled::after { content: none; }
 .tray .slot.filled .coin, .pile .slot.filled .coin { display: grid; }
-.slot .coin { width: 100%; height: 100%; display: none; font-size: 40%; }
+.slot .coin { width: 100%; height: 100%; display: none; font-size: 18px; }
+.pile .slot .coin { font-size: 11px; border-width: 1.5px; }
 .coin.flying { position: fixed; z-index: 50; margin: 0; pointer-events: none; transition: transform 0.5s cubic-bezier(0.3, 0.7, 0.3, 1); will-change: transform; }
 
 .howto { font-size: 18px; color: #5a4b48; max-width: 16ch; line-height: 1.25; flex: none; }
@@ -473,7 +475,7 @@ a { color: inherit; }
 .donut { width: clamp(200px, 38vh, 290px); height: auto; overflow: visible; }
 .donut .center-num { font-family: var(--serif); font-weight: 700; font-size: 40px; fill: var(--ink); }
 .donut .center-sub { font-family: var(--sans); font-size: 15px; font-weight: 700; letter-spacing: 0.12em; fill: #6b5a56; }
-.legend { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 22px; width: 100%; }
+.legend { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 4px; width: 100%; max-width: 340px; }
 .legend li { display: flex; align-items: center; gap: 10px; font-size: 17px; min-width: 0; }
 .legend .sw { width: 16px; height: 16px; border-radius: 4px; flex: none; }
 .legend .nm { flex: 1; min-width: 0; }

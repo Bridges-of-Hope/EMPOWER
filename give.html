@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Give 100 QAR | Bridges of Hope</title>
+  <meta name="theme-color" content="#B8261F">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Source+Sans+3:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="screen">
+    <header class="bar">
+      <a class="home-btn" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5M5.5 9.5V20h13V9.5"/></svg>
+        Home
+      </a>
+      <h1>Give 100 QAR</h1>
+      <div class="bar-meta">Pretend coins only. No real money.</div>
+      <svg class="bar-arch" viewBox="0 0 600 300" aria-hidden="true"><path fill="#fff" fill-rule="evenodd" d="M110 300 A190 160 0 0 1 490 300 Z M176 300 V228 A34 34 0 0 1 244 228 V300 Z M266 300 V220 A34 34 0 0 1 334 220 V300 Z M356 300 V228 A34 34 0 0 1 424 228 V300 Z"/></svg>
+    </header>
+
+    <main class="stage">
+      <section class="play" id="play">
+        <div class="give-top">
+          <div class="counter" aria-live="polite"><b id="left">100</b><small>QAR left</small></div>
+          <div class="tray" id="tray" aria-label="Your coins"></div>
+          <p class="howto">Tap <b>+</b> to give a 10 QAR coin. Tap <b>&minus;</b> to take it back.</p>
+        </div>
+
+        <div class="causes" id="causes"></div>
+
+        <div class="give-foot">
+          <p><strong>This is a game. No real money is involved.</strong> Place all ten coins to see what your giving could look like.</p>
+          <button class="btn btn-gold" id="impact-btn" type="button" disabled>
+            See my impact
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="impact" id="impact" hidden>
+        <div class="donut-wrap">
+          <svg class="donut" id="donut" viewBox="0 0 200 200" role="img" aria-label="Your 100 QAR split across causes"></svg>
+          <ul class="legend" id="legend"></ul>
+        </div>
+        <div class="style-card">
+          <p class="kicker">Your giving style</p>
+          <h2 id="style-name"></h2>
+          <p class="style-desc" id="style-desc"></p>
+          <hr class="rule rule-strong">
+          <div class="illus-head"><h3>What your coins could do</h3><span class="tag">Illustrative only</span></div>
+          <ul class="illus" id="illus"></ul>
+          <div class="btn-row">
+            <button class="btn" id="again-btn" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5"/></svg>
+              Play again
+            </button>
+            <a class="btn btn-ghost" href="index.html">Home</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/give.js"></script>
+</body>
+</html>

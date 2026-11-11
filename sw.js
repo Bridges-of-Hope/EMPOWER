@@ -4,6 +4,8 @@ var FILES = [
   "./",
   "index.html",
   "trivia.html",
+  "give.html",
+  "js/give.js",
   "css/style.css",
   "js/app.js",
   "js/trivia.js",
