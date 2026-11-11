@@ -1,4 +1,4 @@
-var CACHE = "empower-v1";
+var CACHE = "empower-v2";
 var FONT_CSS = "https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Source+Sans+3:wght@400;600;700&display=swap";
 var FILES = [
   "./",
@@ -55,23 +55,38 @@ self.addEventListener("fetch", function (event) {
   var isFont = url.hostname === "fonts.googleapis.com" || url.hostname === "fonts.gstatic.com";
   if (!sameOrigin && !isFont) return;
 
+  // Fonts never change: cache first.
+  if (isFont) {
+    event.respondWith(
+      caches.open(CACHE).then(function (cache) {
+        return cache.match(req).then(function (cached) {
+          return cached || fetch(req).then(function (res) {
+            if (res.ok || res.type === "opaque") cache.put(req, res.clone());
+            return res;
+          });
+        });
+      })
+    );
+    return;
+  }
+
+  // Site files: network first so updates show up right away,
+  // falling back to the cache when offline or the Wi-Fi is too slow.
   event.respondWith(
     caches.open(CACHE).then(function (cache) {
-      return cache.match(req, { ignoreSearch: sameOrigin }).then(function (cached) {
-        var network = fetch(req).then(function (res) {
-          if (res && (res.ok || res.type === "opaque")) cache.put(req, res.clone());
-          return res;
-        });
-        if (cached) {
-          // Serve from cache right away; refresh it in the background.
-          event.waitUntil(network.catch(function () {}));
-          return cached;
-        }
-        return network.catch(function () {
-          if (req.mode === "navigate") return cache.match("index.html");
-          return Response.error();
-        });
+      var network = fetch(req).then(function (res) {
+        if (res.ok) cache.put(req, res.clone());
+        return res;
       });
+      var fallback = function () {
+        return cache.match(req, { ignoreSearch: true }).then(function (cached) {
+          if (cached) return cached;
+          if (req.mode === "navigate") return cache.match("index.html");
+          return network;
+        });
+      };
+      var timeout = new Promise(function (resolve) { setTimeout(resolve, 3000); }).then(fallback);
+      return Promise.race([network.catch(fallback), timeout]);
     })
   );
 });
