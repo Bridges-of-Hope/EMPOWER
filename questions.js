@@ -48,5 +48,20 @@ window.QUESTIONS = [
     question: "What is the theme of EMPOWER 2026?",
     answers: ["Youth Leading for Peace and Security", "Science for Tomorrow", "Sport for All", "Smart Cities"],
     fact: "The theme of EMPOWER 2026 is Youth Leading for Peace and Security."
+  },
+  {
+    question: "UN Security Council Resolution 2250 (2015) was the first resolution on what?",
+    answers: ["Youth, Peace and Security", "Climate and Energy", "Trade and Tariffs", "Space Exploration"],
+    fact: "Resolution 2250, adopted in 2015, was the first UN Security Council resolution on Youth, Peace and Security."
+  },
+  {
+    question: "What does \"food security\" mean?",
+    answers: ["Everyone having reliable access to enough nutritious food", "Locking food in a safe", "Growing only one crop", "Eating at the same time every day"],
+    fact: "Food security means everyone has reliable access to enough nutritious food."
+  },
+  {
+    question: "Education Above All's Educate A Child program focuses on what?",
+    answers: ["Reaching children who are out of school", "Building sports stadiums", "Training airline pilots", "Selling school uniforms"],
+    fact: "Educate A Child, a program of Education Above All, focuses on reaching children who are out of school."
   }
 ];

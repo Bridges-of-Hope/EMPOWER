@@ -19,8 +19,8 @@
       line: "health checkups and cancer awareness in the community" },
     { id: "green", name: "Green Campus", desc: "Trees, recycling, and cleaner shared spaces.", icon: "leaf", color: "#4F7A3A",
       line: "trees and recycling for a greener campus" },
-    { id: "relief", name: "Emergency Relief", desc: "Fast help for families facing a crisis.", icon: "aid", color: "#5E130F",
-      line: "emergency relief for families in crisis" }
+    { id: "relief", name: "Emergency Relief and Safety", desc: "Fast help for families facing a crisis.", icon: "aid", color: "#5E130F",
+      line: "emergency relief and safety for families in crisis" }
   ];
 
   var STYLES = {
