@@ -10,6 +10,41 @@
 
 window.QUESTIONS = [
   {
+    question: "What does the term \"food insecurity\" mean?",
+    answers: ["Not having reliable access to enough nutritious food", "Having too much food", "Choosing not to eat certain foods", "Food being too expensive in restaurants"],
+    fact: "Food insecurity means not having reliable access to enough nutritious food."
+  },
+  {
+    question: "What is the difference between equality and equity?",
+    answers: ["Equality gives everyone the same support; equity considers different needs and barriers", "They mean exactly the same thing", "Equity means everyone receives no support", "Equality applies only to education"],
+    fact: "Equality gives everyone the same support, while equity considers different needs and barriers."
+  },
+  {
+    question: "What percentage of eligible wealth is paid as Zakat?",
+    answers: ["2.5%", "1%", "5%", "10%"],
+    fact: "Zakat is paid at 2.5% of eligible wealth."
+  },
+  {
+    question: "In Islam, what does the word \"Sadaqah Jariyah\" mean?",
+    answers: ["Ongoing charity with continuing reward", "Emergency charity", "Charity given only during Ramadan", "Charity given anonymously"],
+    fact: "Sadaqah Jariyah means ongoing charity with a continuing reward."
+  },
+  {
+    question: "Approximately how much of the world's population lacked safely managed drinking water in 2022?",
+    answers: ["1 in 4", "1 in 10", "1 in 2", "3 in 4"],
+    fact: "In 2022, about 1 in 4 people worldwide lacked safely managed drinking water."
+  },
+  {
+    question: "What is the estimated number of children and young people worldwide who are out of school?",
+    answers: ["250 million", "10 million", "50 million", "800 million"],
+    fact: "An estimated 250 million children and young people worldwide are out of school."
+  },
+  {
+    question: "Why is educating girls particularly important for community development?",
+    answers: ["It improves opportunities and outcomes for future generations", "It only benefits individual students", "It has no impact on poverty", "It only benefits wealthy communities"],
+    fact: "Educating girls improves opportunities and outcomes for future generations."
+  },
+  {
     question: "What are Bridges of Hope's three values?",
     answers: ["Awareness, Action, Community", "Speed, Strength, Success", "Art, Music, Sport", "Study, Sleep, Repeat"],
     fact: "Bridges of Hope is built on three values: Awareness, Action, and Community."
